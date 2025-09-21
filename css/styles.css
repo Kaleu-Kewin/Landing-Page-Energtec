@@ -241,6 +241,7 @@ body {
 }
 
 /* Hero Image */
+
 .hero-image {
     display: flex;
     justify-content: center;
@@ -1144,12 +1145,12 @@ body {
     }
 
     .contact-details h3 {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
         margin-bottom: 4px;
     }
 
     .contact-details p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-bottom: 8px;
     }
 
