@@ -652,11 +652,12 @@ body {
     justify-content: center;
 }
 
-.contact-info {
+.contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    max-width: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .contact-item {
@@ -828,76 +829,309 @@ body {
         left: 0;
     }
 
+    .hero {
+        padding: 80px 0 60px;
+        min-height: auto;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 40px;
+        gap: 30px;
+        padding: 0 15px;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+        line-height: 1.5;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        width: 200px;
     }
 
     .hero-stats {
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .services {
+        padding: 60px 0;
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .service-card {
+        padding: 25px 15px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .service-features {
+        font-size: 0.85rem;
+    }
+
+    .benefits {
+        padding: 60px 0;
     }
 
     .benefits-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .benefit-item {
+        margin-bottom: 20px;
+    }
+
+    .benefit-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .benefit-icon i {
+        font-size: 1.2rem;
+    }
+
+    .benefit-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .benefit-content p {
+        font-size: 0.9rem;
+    }
+
+    .energy-savings-chart {
+        padding: 25px 15px;
+    }
+
+    .chart-title {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .chart-bars {
+        gap: 20px;
+    }
+
+    .bar-container {
+        height: 180px;
+    }
+
+    .bar {
+        width: 50px;
+    }
+
+    .bar-before {
+        height: 120px;
+    }
+
+    .bar-after {
+        height: 30px;
+    }
+
+    .about {
+        padding: 60px 0;
     }
 
     .about-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .about-description {
+        font-size: 1rem;
+        margin-bottom: 25px;
     }
 
     .about-features {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: space-around;
     }
 
-    .contact-info {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .feature {
+        flex: 1;
+    }
+
+    .feature i {
+        font-size: 1.5rem;
+    }
+
+    .feature span {
+        font-size: 0.9rem;
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .contact-item {
+        padding: 20px 15px;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .contact-icon i {
+        font-size: 1.3rem;
+    }
+
+    .contact-details h3 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+
+    .contact-details p {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .btn-whatsapp,
+    .btn-secondary {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    .service-hours {
+        font-size: 0.75rem;
+    }
+
+    .footer {
+        padding: 40px 0 15px;
     }
 
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+        padding: 0 15px;
     }
 
     .footer-links {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 25px;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
     }
 
     .solar-panel-illustration {
+        width: 200px;
+        height: 200px;
+    }
+
+    .panel-icon {
+        font-size: 5rem;
+    }
+
+    .sun-rays {
         width: 250px;
         height: 250px;
     }
 
-    .panel-icon {
-        font-size: 6rem;
+    .team-illustration {
+        width: 200px;
+        height: 200px;
     }
 
-    .sun-rays {
-        width: 300px;
-        height: 300px;
+    .team-icon {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 15px;
+    }
+
+    .contact-item {
+        padding: 15px 10px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-icon i {
+        font-size: 1.1rem;
+    }
+
+    .contact-details h3 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+
+    .contact-details p {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+
+    .btn-whatsapp,
+    .btn-secondary {
+        padding: 6px 10px;
+        font-size: 0.7rem;
+    }
+
+    .service-hours {
+        font-size: 0.7rem;
     }
 }
 
@@ -906,33 +1140,194 @@ body {
         padding: 0 15px;
     }
 
+    .hero {
+        padding: 70px 0 50px;
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .btn {
-        padding: 12px 25px;
-        font-size: 0.9rem;
-    }
-
-    .service-card {
-        padding: 30px 20px;
-    }
-
-    .contact-form {
-        padding: 30px 20px;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        width: 180px;
     }
 
     .hero-stats {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
     .stat-number {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .service-features {
+        font-size: 0.8rem;
+    }
+
+    .benefit-item {
+        margin-bottom: 15px;
+    }
+
+    .benefit-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .benefit-icon i {
+        font-size: 1.1rem;
+    }
+
+    .benefit-content h3 {
+        font-size: 1rem;
+    }
+
+    .benefit-content p {
+        font-size: 0.85rem;
+    }
+
+    .energy-savings-chart {
+        padding: 20px 10px;
+    }
+
+    .chart-title {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .bar-container {
+        height: 150px;
+    }
+
+    .bar {
+        width: 40px;
+    }
+
+    .bar-before {
+        height: 100px;
+    }
+
+    .bar-after {
+        height: 25px;
+    }
+
+    .bar-value {
+        font-size: 0.9rem;
+    }
+
+    .savings-percentage {
+        font-size: 1.2rem;
+    }
+
+    .about-features {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feature i {
+        font-size: 1.3rem;
+    }
+
+    .feature span {
+        font-size: 0.85rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+    .contact-item {
+        padding: 12px 8px;
+    }
+
+    .contact-icon {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 8px;
+    }
+
+    .contact-icon i {
+        font-size: 1rem;
+    }
+
+    .contact-details h3 {
+        font-size: 0.9rem;
+        margin-bottom: 3px;
+    }
+
+    .contact-details p {
+        font-size: 0.75rem;
+        margin-bottom: 6px;
+    }
+
+    .btn-whatsapp,
+    .btn-secondary {
+        padding: 5px 8px;
+        font-size: 0.65rem;
+    }
+
+    .service-hours {
+        font-size: 0.65rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .solar-panel-illustration {
+        width: 150px;
+        height: 150px;
+    }
+
+    .panel-icon {
+        font-size: 4rem;
+    }
+
+    .sun-rays {
+        width: 200px;
+        height: 200px;
+    }
+
+    .team-illustration {
+        width: 150px;
+        height: 150px;
+    }
+
+    .team-icon {
+        font-size: 3rem;
     }
 }
