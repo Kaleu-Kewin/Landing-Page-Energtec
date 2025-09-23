@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-orange: #ff6b35;
+    --primary-yellow: #f7931e;
+    --secondary-orange: #ff8c42;
+    --secondary-yellow: #ffd23f;
+    --dark-orange: #e55a2b;
+    --light-yellow: #fff3cd;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --gray: #6c757d;
+    --dark-gray: #343a40;
+    --black: #212529;
+    --gradient-primary: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--secondary-orange) 0%, var(--secondary-yellow) 100%);
+    --gradient-light: linear-gradient(135deg, var(--light-yellow) 0%, rgba(255, 107, 53, 0.1) 100%);
+    --shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+    --shadow-light: 0 5px 15px rgba(255, 107, 53, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
