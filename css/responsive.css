@@ -27,6 +27,10 @@
         min-height: auto;
     }
 
+    .hero-image {
+        display: none;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -313,6 +317,10 @@
         margin-top: 1rem;
     }
 
+    .hero-image {
+        display: none;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -382,6 +390,10 @@
 
     .hero {
         padding: 70px 0 50px;
+    }
+
+    .hero-image {
+        display: none;
     }
 
     .hero-title {
