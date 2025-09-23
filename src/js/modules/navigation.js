@@ -1,7 +1,7 @@
 export function initNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu   = document.querySelector('.nav-menu');
-    const navLinks  = document.querySelectorAll('.nav-menu a');
+    const navLinks  = document.querySelectorAll('.nav-menu a, a[href="#home"]'); 
 
     if (!hamburger || !navMenu) return;
 
@@ -11,13 +11,12 @@ export function initNavigation() {
     });
 
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-
         link.addEventListener('click', e => {
             e.preventDefault();
+
+            link.classList.add('clicked');
+            setTimeout(() => link.classList.remove('clicked'), 200);
+
             const targetId      = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
 
@@ -30,6 +29,10 @@ export function initNavigation() {
                     behavior: 'smooth'
                 });
             }
+
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
         });
     });
 }
+
