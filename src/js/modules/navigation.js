@@ -3,12 +3,14 @@ export function initNavigation() {
     const navMenu     = document.querySelector('.nav-menu');
     const navLinks    = document.querySelectorAll('.nav-menu a, a[href="#home"]');
     const heroButtons = document.querySelectorAll('.hero-buttons a');
+    const footerLinks = document.querySelectorAll('.footer-links a'); 
 
     if (!hamburger || !navMenu) return;
 
     initHamburger(hamburger, navMenu);
     initNavLinks(navLinks, navMenu, hamburger);
     initHeroButtons(heroButtons);
+    initFooterLinks(footerLinks); 
 }
 
 function initHamburger(hamburger, navMenu) {
@@ -36,15 +38,24 @@ function initHeroButtons(buttons) {
     });
 }
 
+function initFooterLinks(links) {
+    links.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            smoothScroll(link, false);
+        });
+    });
+}
+
 function smoothScroll(element, closeMenu, navMenu = null, hamburger = null) {
     element.classList.add('clicked');
     setTimeout(() => element.classList.remove('clicked'), 200);
 
-    const targetId      = element.getAttribute('href');
+    const targetId = element.getAttribute('href');
     const targetSection = document.querySelector(targetId);
 
     if (targetSection) {
-        const headerHeight   = document.querySelector('.header').offsetHeight;
+        const headerHeight = document.querySelector('.header').offsetHeight;
         const targetPosition = targetSection.offsetTop - headerHeight;
 
         window.scrollTo({
