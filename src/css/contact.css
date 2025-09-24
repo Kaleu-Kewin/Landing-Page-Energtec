@@ -47,6 +47,15 @@
     background: linear-gradient(135deg, #25d366, #128c7e);
 }
 
+.instagram-icon {
+    background: linear-gradient(45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%);
+}
+
 .contact-icon i {
     font-size: 2rem;
     color: var(--white);
@@ -87,5 +96,24 @@
 }
 
 .btn-whatsapp i {
+    margin-right: 8px;
+}
+
+.btn-instagram {
+    background: transparent;
+    color: #E1306C;
+    border: 2px solid #E1306C;
+    box-shadow: none;
+}
+
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(225, 48, 108, 0.4);
+    border-color: transparent;
+}
+
+.btn-instagram i {
     margin-right: 8px;
 }
