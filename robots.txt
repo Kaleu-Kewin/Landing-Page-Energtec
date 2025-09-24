@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://energtec.vercel.app/sitemap.xml
