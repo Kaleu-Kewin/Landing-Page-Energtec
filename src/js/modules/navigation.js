@@ -22,29 +22,31 @@ function initHamburger(hamburger, navMenu) {
 
 function initNavLinks(links, navMenu, hamburger) {
     links.forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            smoothScroll(link, true, navMenu, hamburger);
-        });
+        link.addEventListener('click', e => handleLinkClick(e, link, navMenu, hamburger, true));
     });
 }
 
 function initHeroButtons(buttons) {
     buttons.forEach(button => {
-        button.addEventListener('click', e => {
-            e.preventDefault();
-            smoothScroll(button, false); 
-        });
+        button.addEventListener('click', e => handleLinkClick(e, button, null, null, false));
     });
 }
 
 function initFooterLinks(links) {
     links.forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            smoothScroll(link, false);
-        });
+        link.addEventListener('click', e => handleLinkClick(e, link, null, null, false));
     });
+}
+
+// Função que decide se é link interno ou externo
+function handleLinkClick(e, element, navMenu, hamburger, closeMenu) {
+    const href = element.getAttribute('href');
+
+    if (href.startsWith('#')) {
+        e.preventDefault(); // só previne comportamento padrão para âncoras internas
+        smoothScroll(element, closeMenu, navMenu, hamburger);
+    }
+    // Links externos abrem normalmente (WhatsApp, Instagram, telefone)
 }
 
 function smoothScroll(element, closeMenu, navMenu = null, hamburger = null) {
